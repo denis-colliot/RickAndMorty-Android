@@ -1,15 +1,12 @@
 import dev.rickandmorty.Dependency
 
 plugins {
-    id("com.android.library")
-    id("kotlin-android")
+    id("kotlin")
     kotlin("kapt")
 }
 
 dependencies {
-    implementation(Dependency.timber)
-    implementation(Dependency.Google.hiltAndroid)
-    kapt(Dependency.Google.hiltAndroidCompiler)
-    implementation(Dependency.AndroidX.navigationCompose)
-    implementation(Dependency.AndroidX.hiltNavigationCompose)
+    implementation(Dependency.kotlinCoroutines)
+    implementation(Dependency.Google.hiltCore)
+    kapt(Dependency.Google.hiltCompiler)
 }

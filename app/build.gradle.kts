@@ -38,6 +38,9 @@ dependencies {
     implementation(Dependency.Google.hiltAndroid)
     kapt(Dependency.Google.hiltAndroidCompiler)
     implementation(Dependency.AndroidX.hiltNavigationCompose)
+    implementation(Dependency.AndroidX.composeMaterial)
+    implementation(Dependency.AndroidX.composeMaterialIcons)
+    implementation(Dependency.AndroidX.composeMaterialIconsExtended)
 
     implementation(project(":core:design"))
     implementation(project(":core:navigation"))

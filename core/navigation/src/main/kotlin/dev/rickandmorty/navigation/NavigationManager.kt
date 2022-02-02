@@ -2,14 +2,24 @@ package dev.rickandmorty.navigation
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import javax.inject.Singleton
 
+@Singleton
 class NavigationManager {
 
-    val commands: StateFlow<NavigationCommand> get() = _commands
-    private val _commands = MutableStateFlow<NavigationCommand>(EpisodeRoutes.Default)
+    val route: StateFlow<String> get() = _route
+    private val _route = MutableStateFlow(NavigationRequest.Default.navigationRoute.route)
 
-    fun navigate(directions: NavigationCommand) {
-        _commands.value = directions
+    fun navigate(request: NavigationRequest) {
+        _route.value = request.toRoute()
+    }
+
+    private fun NavigationRequest.toRoute(): String {
+        var resultRoute: String = navigationRoute.route
+        arguments.forEach { (argKey, argValue) ->
+            resultRoute = resultRoute.replace("{$argKey}", argValue.toString())
+        }
+        return resultRoute
     }
 
 }

@@ -12,6 +12,7 @@ dependencies {
     coreLibraryDesugaring(Dependency.Android.desugarJdkLibs)
 
     implementation(project(":core:design"))
+    implementation(project(":core:navigation"))
     implementation(project(":episode:domain"))
 
     implementation(Dependency.AndroidX.coreKtx)
@@ -28,7 +29,6 @@ dependencies {
     implementation(Dependency.AndroidX.composeMaterialIconsExtended)
     implementation(Dependency.AndroidX.composeRuntimeLivedata)
     implementation(Dependency.AndroidX.composeRuntimeSaveable)
-    implementation(Dependency.AndroidX.hiltNavigationCompose)
 
     implementation(Dependency.Google.hiltAndroid)
     kapt(Dependency.Google.hiltAndroidCompiler)
