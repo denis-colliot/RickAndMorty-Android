@@ -12,9 +12,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import dev.rickandmorty.episode.viewmodel.EpisodeSearchViewModel
+import dev.rickandmorty.episode.viewmodel.EpisodeViewModel
+import timber.log.Timber
 
 @Composable
-fun EpisodesListScreen(viewModel: EpisodeSearchViewModel) {
+fun EpisodesSearchScreen(viewModel: EpisodeSearchViewModel, sharedViewModel: EpisodeViewModel) {
+    Timber.tag("INSTANCES").d("[Search] Search VM = %s", viewModel)
+    Timber.tag("INSTANCES").d("[Search] Shared VM = %s", sharedViewModel)
     val text = viewModel.text.observeAsState().value
     Column(
         modifier = Modifier

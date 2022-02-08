@@ -37,6 +37,7 @@ dependencies {
     implementation(Dependency.timber)
     implementation(Dependency.Google.hiltAndroid)
     kapt(Dependency.Google.hiltAndroidCompiler)
+
     implementation(Dependency.AndroidX.hiltNavigationCompose)
     implementation(Dependency.AndroidX.composeMaterial)
     implementation(Dependency.AndroidX.composeMaterialIcons)

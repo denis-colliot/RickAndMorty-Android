@@ -8,11 +8,11 @@ import org.gradle.api.JavaVersion
 object Dependency {
 
     val javaVersion = JavaVersion.VERSION_11
-    const val kotlinVersion = "1.6.10"
+    private const val kotlinVersion = "1.6.10"
     private const val kotlinCoroutinesVersion = "1.6.0"
 
     object Plugin {
-        const val androidGradle = "com.android.tools.build:gradle:7.1.0"
+        const val androidGradle = "com.android.tools.build:gradle:7.1.1"
         const val androidJunit5 = "de.mannodermaus.gradle.plugins:android-junit5:1.8.2.0"
         const val kotlinGradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         const val hiltGradle = "com.google.dagger:hilt-android-gradle-plugin:${Google.hiltVersion}"
@@ -30,8 +30,6 @@ object Dependency {
         const val appCompat = "androidx.appcompat:appcompat:1.4.1"
 
         const val activityCompose = "androidx.activity:activity-compose:1.4.0"
-        const val navigationCompose = "androidx.navigation:navigation-compose:2.4.0"
-
         const val hiltNavigationCompose = "androidx.hilt:hilt-navigation-compose:1.0.0"
 
         const val composeUi = "androidx.compose.ui:ui:$composeVersion"
@@ -58,11 +56,13 @@ object Dependency {
 
     object Google {
         const val hiltVersion = "2.40.5"
+        private const val accompanistVersion = "0.22.1-rc" // Compatible with compose 1.1.x
 
         const val hiltCore = "com.google.dagger:hilt-core:$hiltVersion"
         const val hiltCompiler = "com.google.dagger:hilt-compiler:$hiltVersion"
         const val hiltAndroid = "com.google.dagger:hilt-android:$hiltVersion"
         const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:$hiltVersion"
+        const val accompanistNavigationAnimation = "com.google.accompanist:accompanist-navigation-animation:$accompanistVersion"
     }
 
     object Test {

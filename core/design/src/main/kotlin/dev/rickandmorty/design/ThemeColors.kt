@@ -8,43 +8,61 @@ import androidx.compose.ui.graphics.Color
 internal object ThemeColors {
 
     val LightThemeColors: Colors = lightColors(
-        primary = ChiliColors.GreenM,
-        primaryVariant = ChiliColors.GreenL,
-        onPrimary = ChiliColors.White,
-        secondary = ChiliColors.BlueS,
+        primary = RickAndMortyColors.primary,
+        primaryVariant = RickAndMortyColors.primaryVariant,
+        onPrimary = CommonColors.White,
+        secondary = RickAndMortyColors.secondary,
         secondaryVariant = ChiliColors.BlueS,
-        onSecondary = ChiliColors.White,
-        background = ChiliColors.White,
-        onBackground = ChiliColors.Black,
-        surface = ChiliColors.White,
-        onSurface = ChiliColors.Black,
+        onSecondary = CommonColors.White,
+        background = CommonColors.White,
+        onBackground = CommonColors.Black,
+        surface = CommonColors.White,
+        onSurface = CommonColors.Black,
         error = ChiliColors.RedM,
-        onError = ChiliColors.White,
+        onError = CommonColors.White,
     )
 
     val DarkThemeColors: Colors = darkColors(
-        primary = ChiliColors.GreenM,
-        primaryVariant = ChiliColors.Black,
-        onPrimary = ChiliColors.GrayXs,
-        secondary = ChiliColors.BlueS,
+        primary = RickAndMortyColors.primary,
+        primaryVariant = RickAndMortyColors.primaryVariant,
+        onPrimary = RickAndMortyColors.rickHair,
+        secondary = RickAndMortyColors.secondary,
         secondaryVariant = ChiliColors.BlueM,
-        onSecondary = ChiliColors.White,
-        background = ChiliColors.Black,
-        onBackground = ChiliColors.GrayXs,
+        onSecondary = CommonColors.White,
+        background = CommonColors.Black,
+        onBackground = RickAndMortyColors.rickHair,
         surface = ChiliColors.GrayXl,
-        onSurface = ChiliColors.GrayXs,
+        onSurface = RickAndMortyColors.rickHair,
         error = ChiliColors.RedM,
-        onError = ChiliColors.White
+        onError = CommonColors.White
     )
 
 }
 
 @Suppress("unused")
-private object ChiliColors {
-    // Special
+private object RickAndMortyColors {
+    val primary = Color(0xff01B1CA)
+    val primaryVariant = Color(0xff2D5EB0)
+    val secondary = Color(0xffFFCC00)
+
+    val rickTeeShirt = Color(0xffA5F0E7)
+    val mortyTeeShirt = Color(0xffFCFF70)
+
+    val rickHair = Color(0xffB7E5FC)
+    val mortyHair = Color(0xff85511F)
+
+    val pickleRickPrimary = Color(0xff659C2C)
+    val pickleRickSecondary = Color(0xff4D8024)
+}
+
+@Suppress("unused")
+private object CommonColors {
     val Black = Color(0xff000000)
     val White = Color(0xffFFFFFF)
+}
 
+@Suppress("unused")
+private object ChiliColors {
     // Green
     val GreenXxl = Color(0xff0F190B)
     val GreenXl = Color(0xff28431E)
